@@ -12,9 +12,10 @@
   - [er diagram](#er-diagram)
   - [ภาพรวม](#ภาพรวม)
     - [โฟล เชื่อมโยงข้อมูลประมวลผล](#โฟล-เชื่อมโยงข้อมูลประมวลผล)
-    - [โฟล Data Markings](#โฟล-data-markings)
+    - [โฟล Data Markings ใหม่ที่ใช้](#โฟล-data-markings-ใหม่ที่ใช้)
   - [กระบวนการ Cleansing](#กระบวนการ-cleansing)
 - [Note อื่นๆ](#note-อื่นๆ)
+  - [DIAGTYPE](#diagtype)
 
 ## แฟ้มที่ใช้
 - แฟ้มที่ 1 NHSO Patient ข้อมูลทั่วไปของผู้เข้ารับบริการ
@@ -24,43 +25,50 @@
 - แฟ้มที่ 7 NHSO CHAD ข้อมูลรายละเอียดค่าใช้จ่ายรายรายการของผู้เข้ารับบริการตามรหัสมาตรฐาน
 
 ### อธิบาย
-1. ไฟล์รูปแบบ `csv` ใช้ตัวคั่นเป็น `;`  
+1. ไฟล์รูปแบบ `excel` และ `csv` เป็นโครงสร้างตามโครงสร้าง 13 แฟ้ม สปสช. โดย `csv` จะใช้ตัวคั้นเป็น `,`
 2. จะมีการเพิ่ม field พิเศษตามความต้องการของ user โดยจะขึ้นต้นด้วย `CUSTOM_` ซึ่งเป็น field นอกมาตฐาน 13 แฟ้ม ไม่แนะนำให้ใช้สำหรับการประมวลผล
-3. `field` ที่ไม่มีการส่งออกข้อมูล คือ ที่มีคำอธิบายลงท้ายว่าว่า **ไม่ต้องใส่**
+3. `field` ที่ไม่มีการส่งออกข้อมูล คือ ที่มีคำอธิบายลงท้ายว่าว่า **ไม่ส่งออก**
 4. คำอธิบายที่ลงท้ายด้วย **marking** คือ มีข้อมูล แต่ส่งออกขั้นสุดท้ายโดนปิดไว้ไม่ส่งออก เพราะเนื่องจาก อาจมีข้อมูลบุคคล
-5. ไฟล์ที่ส่งออกจะมี 2 ชุดฃ
-   1. orginal. ไฟล์ก่อนทำการ marking ไว้สำหรับตรวจสอบความถูกต้อง หรือ ไว้สำหรับประมวลผลต่อ
-   2. marking. ไฟล์ที่ผ่านการ marking ลบพวกเลขบัตรแล้ว
+5. ไฟล์ที่ส่งออกจะทำการ **marking** ข้อมูลไม่ให้ตามหาข้อมูลเดิมได้ แต่ความหมายยังเหมือนเดิม เช่น ถ้าค่า `CID` เดียวกันหมายถึงคนเดียวกัน หรือ `PROFESSION_ID` คนเดียวกันหมายถึง Diagnosis จากเจ้าหน้าที่คนเดียวกัน โดนมี `field` ที่ทำการ **marking** ดังนี้
+   - `SEQ` ทุกไฟล์
+   - `PERMITNO` อยู่ในไฟล์ 4 OPD
+   - `INVOICE_NO` อยู่ในไฟล์ 7 CHAD
+   - `HCODE`, `HCODE_NAME` อยู่ในไฟล์ 2 Provider
+   - `PROFESSION_ID` อยู่ในไฟล์ 5 Diagnosis
+   - `CID` อยู่ในไฟล์ 1 Patient
+6. `ID` ที่ใช้ทำหรับการ **marking** การส่งออกแต่ละครั้งจะไม่เหมือนกัน โดนจะทำการสุ่มเลข แล้ว เรียงลำดับเลขที่สุ่มใหม่ทุกครั้งที่ส่งออก ถ้าต้องการ Lookup ข้อมูลตัว `ID` ที่ทำการ **marking** ให้ติดต่อผู้พัฒนา เพราะข้อมูลที่สามารถตามหาข้อมูลเดิมได้ ไม่ได้ส่งออกมา เพื่อป้องกันข้อมูลหลุด
+   - หากมีการส่งออกข้อมูลครั้งใหม่ จำเป็นต้องนำเข้าใหม่ทั้งหมด
+
 ### แฟ้มที่ 1 NHSO Patient
 - SEQ admits._id
 - TYPE fix CID = บัตรประชาชน
 - CID permissions_user.username **marking**
-- PPN null **ไม่ต้องใส่**
-- PWD null **ไม่ต้องใส่**
-- NAME.GIVEN permissions_user.name **ไม่ต้องใส่**
-- NAME.FAMILY permissions_user.surname **ไม่ต้องใส่**
+- PPN null **ไม่ส่งออก**
+- PWD null **ไม่ส่งออก**
+- NAME.GIVEN permissions_user.name **ไม่ส่งออก**
+- NAME.FAMILY permissions_user.surname **ไม่ส่งออก**
 - BIRTHDATE permissions_user.birth รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd` `2021-12-31`
 - GENDER permissions_user.gender แปลงเป็นเลข 1=ชาย, 2=หญิง
-- ADDRESS.LINE null **ไม่ต้องใส่**
-- ADDRESS.CITY null **ไม่ต้องใส่**
-- ADDRESS.DISTRICT null **ไม่ต้องใส่**
-- ADDRESS.STATE null **ไม่ต้องใส่**
-- ADDRESS.POSTALCODE null **ไม่ต้องใส่**
-- NATIONALITY permissions_user.nationality **ไม่ต้องใส่**
-- RACE permissions_user.nationality **ไม่ต้องใส่**
-- HN admits.patientDetail.hn **ไม่ต้องใส่**
-- AN admits.patientDetail.an **ไม่ต้องใส่**
+- ADDRESS.LINE null **ไม่ส่งออก**
+- ADDRESS.CITY null **ไม่ส่งออก**
+- ADDRESS.DISTRICT null **ไม่ส่งออก**
+- ADDRESS.STATE null **ไม่ส่งออก**
+- ADDRESS.POSTALCODE null **ไม่ส่งออก**
+- NATIONALITY permissions_user.nationality **ไม่ส่งออก**
+- RACE permissions_user.nationality **ไม่ส่งออก**
+- HN admits.patientDetail.hn **ไม่ส่งออก**
+- AN admits.patientDetail.an **ไม่ส่งออก**
 - **CUSTOM_AGE อายุ**
 
 ### แฟ้มที่ 2 NHSO Provider
 - SEQ admits._id
 - HCODE hospitals.prefix
 - HCODE_NAME hospitals.name
-- HCODE_SEND hospitals.prefix **ไม่ต้องใส่**
-- HCODE_SEND_NAME hospitals.name **ไม่ต้องใส่**
-- HMAIN null **ไม่ต้องใส่**
-- HMAIN_NAME  null **ไม่ต้องใส่**
-- AN admits.patientDetail.an **ไม่ต้องใส่**
+- HCODE_SEND hospitals.prefix **ไม่ส่งออก**
+- HCODE_SEND_NAME hospitals.name **ไม่ส่งออก**
+- HMAIN null **ไม่ส่งออก**
+- HMAIN_NAME  null **ไม่ส่งออก**
+- AN admits.patientDetail.an **ไม่ส่งออก**
 - **CUSTOM_HCODE_TYPE** ประเภทสถานพยาบาลในระบบ amed
 
 ### แฟ้มที่ 4 NHSO OPD
@@ -78,60 +86,60 @@
   - admit.patientDetail.opself.ccode
   - เหมือน 2 อันบนจะมีเลขที่ไม่ซ้ำกัน
   - PERMITNO 2 วันยังงมอยู่ เอาเท่าที่ได้ เหมือนข้อมูล api ตัวใหม่จะเป็นโครงสร้าง database อีกแบบเดี๊ยวค่อยตาม **TODO**
-- HTYPE null **ไม่ต้องใส่**
-- UUC null **ไม่ต้องใส่**
-- CHIEFCOMP null **ไม่ต้องใส่**
-- BTEMP null **ไม่ต้องใส่**
-- SBP null **ไม่ต้องใส่**
-- DBP null **ไม่ต้องใส่**
-- PR null **ไม่ต้องใส่**
-- RR null **ไม่ต้องใส่**
-- WAISTLINE null **ไม่ต้องใส่**
-- WEIGHT null **ไม่ต้องใส่**
-- HEIGHT null **ไม่ต้องใส่**
-- HEADCIRCUM null **ไม่ต้องใส่**
-- CLINIC null **ไม่ต้องใส่**
+- HTYPE null **ไม่ส่งออก**
+- UUC null **ไม่ส่งออก**
+- CHIEFCOMP null **ไม่ส่งออก**
+- BTEMP null **ไม่ส่งออก**
+- SBP null **ไม่ส่งออก**
+- DBP null **ไม่ส่งออก**
+- PR null **ไม่ส่งออก**
+- RR null **ไม่ส่งออก**
+- WAISTLINE null **ไม่ส่งออก**
+- WEIGHT null **ไม่ส่งออก**
+- HEIGHT null **ไม่ส่งออก**
+- HEADCIRCUM null **ไม่ส่งออก**
+- CLINIC null **ไม่ส่งออก**
 
 ### แฟ้มที่ 5 NHSO Diagnosis
 - SEQ admits._id
 - DATEDX diagnoses.createdAt รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
 - DIAG diagnoses.diseases ต้องเอาไป lookup หา icd10 
-- DIAGTYPE null **ไม่ต้องใส่**
+- DIAGTYPE null **ไม่ส่งออก**
 - PROFESSION_ID diagnoses.doctor ดูเลขที่ใบอนุญาติต้องเอาไป lookup username **ให้ใช้เป็น data masking**
-- CLINIC null **ไม่ต้องใส่**
-- AN admits.patientDetail.an **ไม่ต้องใส่**
+- CLINIC null **ไม่ส่งออก**
+- AN admits.patientDetail.an **ไม่ส่งออก**
 
 ### แฟ้มที่ 7 NHSO CHAD 
 - SEQ admits._id
-- STDCODE null **ไม่ต้องใส่**
-- INVOICE_NO drug._id **ไม่ต้องใส่**
+- STDCODE null **ไม่ส่งออก**
+- INVOICE_NO drug._id **ไม่ส่งออก**
 - SERVDATE drugs.createdAt รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
 - LOCALCODE tpu
 - DESCRIPT ต้องเอา drug ไป lookup "ชื่อยาname unit"
 - QTY components_drug_medicines.qty ต้องเอา drug.medicines มา lookup
-- UNITPRICE null **ไม่ต้องใส่**
-- CHARGEAMT null **ไม่ต้องใส่**
+- UNITPRICE null **ไม่ส่งออก**
+- CHARGEAMT null **ไม่ส่งออก**
 - CODESYS fix "TMT"
-- LAB_RESULT null **ไม่ต้องใส่**
+- LAB_RESULT null **ไม่ส่งออก**
 - UNIT medicines.unit
-- REIMBPRICE null **ไม่ต้องใส่**
-- XRAY_RESUT null **ไม่ต้องใส่**
-- PATHO_RESULT null **ไม่ต้องใส่**
-- AN admits.patientDetail.an **ไม่ต้องใส่**
-- PROJCODE null **ไม่ต้องใส่**
-- SP_ITEM null **ไม่ต้องใส่**
-- DRUGREMARK null **ไม่ต้องใส่**
-- PA_NO null **ไม่ต้องใส่**
-- USE_STATUS null **ไม่ต้องใส่**
-- CAGCODE null **ไม่ต้องใส่**
-- SERIALNO null **ไม่ต้องใส่**
-- SIGCODE null รหัสวิธีใช้ยา **ไม่ต้องใส่**
-- SIGTEXT null วิธีใช้ยา **ไม่ต้องใส่**
+- REIMBPRICE null **ไม่ส่งออก**
+- XRAY_RESUT null **ไม่ส่งออก**
+- PATHO_RESULT null **ไม่ส่งออก**
+- AN admits.patientDetail.an **ไม่ส่งออก**
+- PROJCODE null **ไม่ส่งออก**
+- SP_ITEM null **ไม่ส่งออก**
+- DRUGREMARK null **ไม่ส่งออก**
+- PA_NO null **ไม่ส่งออก**
+- USE_STATUS null **ไม่ส่งออก**
+- CAGCODE null **ไม่ส่งออก**
+- SERIALNO null **ไม่ส่งออก**
+- SIGCODE null รหัสวิธีใช้ยา **ไม่ส่งออก**
+- SIGTEXT null วิธีใช้ยา **ไม่ส่งออก**
 - **CUSTOM_TPUID**
 - **CUSTOM_TPUFSN**
 - **CUSTOM_GPUID**
 - **CUSTOM_GPUFSN**
-- **CUSTOM_CONTENT** อาจจะไม่ต้องใส่ เพราะเป็น free text ผู้ใช้กรอกอะไรมาก็ได้ อาจมีข้อมูลส่วนบุคคล **marking**
+- **CUSTOM_CONTENT** อาจจะไม่ต้องใส่ เพราะเป็น free text ผู้ใช้กรอกอะไรมาก็ได้ อาจมีข้อมูลส่วนบุคคล และพบเจอมีการใส่ชื่อจริงลงไปจำนวนมาก **marking**
 
 # ออกแบบลำดับการประมวลผล
 
@@ -172,13 +180,14 @@ flowchart TD
   p1_p2-->p4["แฟ้ม 4 นำเข้า SEQ"]
 ```
 
-### โฟล Data Markings
+### โฟล Data Markings ใหม่ที่ใช้
 ```mermaid
 flowchart TD
   s(Start)
-  s-->import["นำเช้าข้อมูล"]
-  import-->marking["ซ่อนข้อมูลระบุตัวตนออกไป \nเลขบัตร, free text, เลข ว."]
-  marking-->export_r["ส่งออกข้อมูลที่ผ่านการ Data Markings.csv \nสำหรับงานวิจัย"]
+  s-->import["นำเช้าข้อมูลที่ต้องการ Markings"]
+  import-->cleansing["ทำการ Cleansing\n UK,PK, etc.."]
+  cleansing-->marking["สร้าง Markings ID เลขสุ่มประจำข้อมูลแต่ละชุด"]
+  marking-->export_r["แทนที่ข้อมูลเดิมด้วย Markings ID"]
   export_r-->e(End)
 ```
 
@@ -188,6 +197,7 @@ flowchart TD
 
 
 # Note อื่นๆ
+## DIAGTYPE
 วันเวลาที่ Diag อาจเกิดทีหลังการจ่ายยาได้ เพราะว่า ระบบไม่ได้บังคัง สามารถมาใส่เพิ่มตอนหลังได้
 ```
 DIAGTYPE
@@ -199,4 +209,3 @@ DIAGTYPE
 6 = Additional Code (รหัสเสริม) 
 7 = Morphology Code (รหัสเกี่ยวกับเนื้องอก)
 ```
-
