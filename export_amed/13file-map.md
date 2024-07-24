@@ -41,14 +41,14 @@
 
 ### แฟ้มที่ 1 NHSO Patient
 - SEQ admits._id
-- TYPE fix CID = บัตรประชาชน
-- CID permissions_user.username **marking**
+- TYPE fix CID = ประเภทบัตรประชาชน
+- CID permissions_user.username เลขบัตรประชาชน **marking**
 - PPN null **ไม่ส่งออก**
 - PWD null **ไม่ส่งออก**
 - NAME.GIVEN permissions_user.name **ไม่ส่งออก**
 - NAME.FAMILY permissions_user.surname **ไม่ส่งออก**
-- BIRTHDATE permissions_user.birth รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd` `2021-12-31`
-- GENDER permissions_user.gender แปลงเป็นเลข 1=ชาย, 2=หญิง
+- BIRTHDATE permissions_user.birth วันเกิด รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd` `2021-12-31`
+- GENDER permissions_user.gender เพศ แปลงเป็นเลข 1=ชาย, 2=หญิง
 - ADDRESS.LINE null **ไม่ส่งออก**
 - ADDRESS.CITY null **ไม่ส่งออก**
 - ADDRESS.DISTRICT null **ไม่ส่งออก**
@@ -62,8 +62,8 @@
 
 ### แฟ้มที่ 2 NHSO Provider
 - SEQ admits._id
-- HCODE hospitals.prefix
-- HCODE_NAME hospitals.name
+- HCODE hospitals.prefix รหัสสถานพยาบาล 5 หลัก
+- HCODE_NAME hospitals.name ชื่อสถานพยาบาล
 - HCODE_SEND hospitals.prefix **ไม่ส่งออก**
 - HCODE_SEND_NAME hospitals.name **ไม่ส่งออก**
 - HMAIN null **ไม่ส่งออก**
@@ -102,10 +102,10 @@
 
 ### แฟ้มที่ 5 NHSO Diagnosis
 - SEQ admits._id
-- DATEDX diagnoses.createdAt รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
-- DIAG diagnoses.diseases ต้องเอาไป lookup หา icd10 
+- DATEDX diagnoses.createdAt วันเดือนปีที่วินิจฉัยโรค รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
+- DIAG diagnoses.diseases วินิจฉัยโรคตามรหัส ICD 10 ต้องเอาไป lookup หา icd10 
 - DIAGTYPE null **ไม่ส่งออก**
-- PROFESSION_ID diagnoses.doctor ดูเลขที่ใบอนุญาติต้องเอาไป lookup username **ให้ใช้เป็น data masking**
+- PROFESSION_ID diagnoses.doctor เลขใบอนุญาตประกอบวิชาชีพ  **ให้ใช้เป็น data masking**
 - CLINIC null **ไม่ส่งออก**
 - AN admits.patientDetail.an **ไม่ส่งออก**
 
@@ -113,15 +113,18 @@
 - SEQ admits._id
 - STDCODE null **ไม่ส่งออก**
 - INVOICE_NO drug._id **ไม่ส่งออก**
-- SERVDATE drugs.createdAt รูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
-- LOCALCODE tpu
-- DESCRIPT ต้องเอา drug ไป lookup "ชื่อยาname unit"
-- QTY components_drug_medicines.qty ต้องเอา drug.medicines มา lookup
+- SERVDATE drugs.createdAt วันที่ ให้/ใช้ บริการรูปแบบตาม 13 แฟ้ม `yyyy-MM-dd'T'HH:mm:ss` `2021-12-31T13:15:30`
+- LOCALCODE fix tpu รหัสรายการค่าบริการที่สถานพยาบาลกำหนด
+- DESCRIPT ชื่อรายการที่สถานพยาบาลกำหนด รวมหน่วยนับ/เรียก ถ้ามี
+  - ETL Note: ต้องเอา drug ไป lookup "ชื่อยาname unit"
+- QTY จำนวนหน่วยที่ใช้
+  - ETL Note: components_drug_medicines.qty ต้องเอา drug.medicines มา lookup
 - UNITPRICE null **ไม่ส่งออก**
 - CHARGEAMT null **ไม่ส่งออก**
-- CODESYS fix "TMT"
+- CODESYS fix "TMT" ระบบรหัสที่ใช้กับ STDCODE
 - LAB_RESULT null **ไม่ส่งออก**
-- UNIT medicines.unit
+- UNIT หน่วยนับ 
+  - ETL Note: medicines.unit
 - REIMBPRICE null **ไม่ส่งออก**
 - XRAY_RESUT null **ไม่ส่งออก**
 - PATHO_RESULT null **ไม่ส่งออก**
