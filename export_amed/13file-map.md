@@ -9,7 +9,8 @@
     - [แฟ้มที่ 5 NHSO Diagnosis](#แฟ้มที่-5-nhso-diagnosis)
     - [แฟ้มที่ 7 NHSO CHAD](#แฟ้มที่-7-nhso-chad)
 - [ออกแบบลำดับการประมวลผล](#ออกแบบลำดับการประมวลผล)
-  - [er diagram](#er-diagram)
+  - [er diagram โครงสร้าง 13 แฟ้ม](#er-diagram-โครงสร้าง-13-แฟ้ม)
+  - [er diagram ฐาน amed](#er-diagram-ฐาน-amed)
   - [ภาพรวม](#ภาพรวม)
     - [โฟล เชื่อมโยงข้อมูลประมวลผล](#โฟล-เชื่อมโยงข้อมูลประมวลผล)
     - [โฟล Data Markings ใหม่ที่ใช้](#โฟล-data-markings-ใหม่ที่ใช้)
@@ -145,8 +146,22 @@
 - **CUSTOM_CONTENT** อาจจะไม่ต้องใส่ เพราะเป็น free text ผู้ใช้กรอกอะไรมาก็ได้ อาจมีข้อมูลส่วนบุคคล และพบเจอมีการใส่ชื่อจริงลงไปจำนวนมาก **marking**
 
 # ออกแบบลำดับการประมวลผล
+## er diagram โครงสร้าง 13 แฟ้ม
+```mermaid
+erDiagram
+  provider["NHSO Provider ข้อมูลสถานพยาบาล"]
+  person["NHSO Patient ข้อมูลทั่วไปผู้เข้ารับบริการ"]
+  opd["NHSO OPD ข้อมูลการรับบริการผู้ป่วยนอก"]
+  diag["NHSO Diagnosis ข้อมูลวินิจฉัยโรค"]
+  chad["NHSO CHAD รายละเอียดค่าใช้จ่าย"]
+  
+  person one to many opd : "one person to many opd"
+  provider many to many person : "many to many"
+  opd one to many diag : "one opd to many diag"
+  diag one to many chad : "one opd to many chad"
+```
 
-## er diagram
+## er diagram ฐาน amed
 ```mermaid
 erDiagram
   person["ข้อมูลคน"]
