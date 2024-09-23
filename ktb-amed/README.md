@@ -87,6 +87,7 @@ flowchart LR
         flowchart LR
             hw["Health Wallet"]
             amed["amed care database"]
+            gw["AMED Gateway"]
 
             hw -->|"1"| gw
             gw <-->|"2"| amed
