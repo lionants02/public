@@ -109,11 +109,11 @@ gantt
     dateFormat YYYY-MM-DD
     excludes weekends
     weekend friday
-    Initial : milestone,m1 ,2024-09-27,0d
+    Initial : milestone,m1 ,2024-09-29,0d
     section ออกแบบ
         openapi          :a1, 2024-10-07, 3d
     section พัฒนา
-        infrastructure: 2024-09-27, 30d
+        infrastructure: 2024-09-29, 31d
         coding :2024-10-07, 16d
         CI/CD deploy    :2d
         Basic api gateway    :7d
