@@ -4,6 +4,7 @@
     - [1. Get Hospital List](#1-get-hospital-list)
     - [2. Create Appointment](#2-create-appointment)
     - [3. Update Appointment Status](#3-update-appointment-status)
+- [Timelie](#timelie)
 
 # เกริ่น
 เป็นส่วนของไดอะแกรมการเรียกใช้งาน api ระหว่าง KTB กับ amed โดยในตอนนี้จะมีโฟลการไหลของของข้อมูลทั้งหมด 3 ข้อคือ
@@ -100,3 +101,21 @@ flowchart LR
     <li>ส่งสถานะรับบริการกลับไปยัง Health Wallet</li>
 </ol> 
 </details>
+
+# Timelie
+```mermaid
+gantt
+    title Timeline
+    dateFormat YYYY-MM-DD
+    section ออกแบบ
+        openapi          :a1, 2024-10-07, 3d
+    section พัฒนา
+        infrastructure: 2024-10-01, 30d
+        coding :2024-10-07, 16d
+        CI/CD deploy    :2d
+        Basic api gateway    :7d
+        test fix bug    :28d
+    section อื่นๆ
+        logging :2024-10-30, 30d
+        monitor :2024-10-30, 30d
+```
