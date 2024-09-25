@@ -4,7 +4,7 @@
     - [1. Get Hospital List](#1-get-hospital-list)
     - [2. Create Appointment](#2-create-appointment)
     - [3. Update Appointment Status](#3-update-appointment-status)
-- [Timelie](#timelie)
+- [Timeline](#timeline)
 
 # เกริ่น
 เป็นส่วนของไดอะแกรมการเรียกใช้งาน api ระหว่าง KTB กับ amed โดยในตอนนี้จะมีโฟลการไหลของของข้อมูลทั้งหมด 3 ข้อคือ
@@ -102,7 +102,7 @@ flowchart LR
 </ol> 
 </details>
 
-# Timelie
+# Timeline
 ```mermaid
 gantt
     title Timeline
