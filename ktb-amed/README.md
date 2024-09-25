@@ -114,11 +114,11 @@ gantt
         openapi          :a1, 2024-10-07, 3d
     section พัฒนา
         infrastructure: 2024-09-29, 31d
-        coding :2024-10-07, 16d
+        coding :2024-10-11, 16d
         CI/CD deploy    :2d
         Basic api gateway    :7d
         test fix bug    :28d
     section อื่นๆ
-        logging :2024-10-30, 30d
-        monitor :2024-10-30, 30d
+        logging :2024-11-15, 30d
+        monitor :2024-11-15, 30d
 ```
