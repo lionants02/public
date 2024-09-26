@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="mermaid-svg"
+   width="841.5564"
+   viewBox="-389.68048 -166.1631 841.5564 728.82678"
+   role="graphics-document document"
+   aria-roledescription="architecture"
+   version="1.1"
+   sodipodi:docname="diagram.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   height="728.82678"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <title
+     id="title111">Diagram</title>
+  <defs
+     id="defs93">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="namedview93"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.87888783"
+     inkscape:cx="405.62628"
+     inkscape:cy="386.28365"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="false" />
+  <xhtml:style>@import url(&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css&quot;);</xhtml:style>
+  <style
+     id="style1">#mermaid-svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:1px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;}#mermaid-svg p{margin:0;}#mermaid-svg .edge{stroke-width:3;stroke:#333333;fill:none;}#mermaid-svg .arrow{fill:#333333;}#mermaid-svg .node-bkg{fill:none;stroke:hsl(240, 60%, 86.2745098039%);stroke-width:2px;stroke-dasharray:8;}#mermaid-svg .node-icon-text{display:flex;align-items:center;}#mermaid-svg .node-icon-text&gt;div{color:#fff;margin:1px;height:fit-content;text-align:center;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;}#mermaid-svg :root{--mermaid-font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;}</style>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Back"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect109"
+       width="798.73676"
+       height="695.19678"
+       x="-368.06226"
+       y="-150.23387"
+       ry="27.30724" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Main"
+     style="display:inline">
+    <g
+       id="g1" />
+    <rect
+       style="fill:#d5e5ff;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect99"
+       width="113.44116"
+       height="589.73315"
+       x="-310.83487"
+       y="-96.167488" />
+    <g
+       class="architecture-service"
+       transform="translate(-298.68048,-83.663102)"
+       id="g30">
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="middle"
+         text-anchor="middle"
+         transform="translate(40,80)"
+         id="g11">
+        <g
+           id="g10">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect8"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text10"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan10"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan8">Health</tspan><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan9">Wallet</tspan></tspan></text>
+        </g>
+      </g>
+      <g
+         id="g29">
+        <g
+           id="g28">
+          <svg
+             width="80"
+             height="80"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg27">
+            <g
+               id="g27">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect11"
+                 x="0"
+                 y="0" />
+              <rect
+                 x="17.5"
+                 y="17.5"
+                 width="45"
+                 height="45"
+                 rx="2"
+                 ry="2"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="rect12" />
+              <line
+                 x1="17.5"
+                 y1="32.5"
+                 x2="62.5"
+                 y2="32.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line12" />
+              <line
+                 x1="17.5"
+                 y1="47.5"
+                 x2="62.5"
+                 y2="47.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line13" />
+              <g
+                 id="g14">
+                <path
+                   d="m 56.25,25 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path13" />
+                <path
+                   d="m 56.25,25 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path14" />
+              </g>
+              <g
+                 id="g16">
+                <path
+                   d="m 56.25,40 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path15" />
+                <path
+                   d="m 56.25,40 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path16" />
+              </g>
+              <g
+                 id="g18">
+                <path
+                   d="m 56.25,55 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path17" />
+                <path
+                   d="m 56.25,55 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path18" />
+              </g>
+              <g
+                 id="g20">
+                <circle
+                   cx="32.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle18" />
+                <circle
+                   cx="27.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle19" />
+                <circle
+                   cx="22.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle20" />
+              </g>
+              <g
+                 id="g23">
+                <circle
+                   cx="32.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle21" />
+                <circle
+                   cx="27.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle22" />
+                <circle
+                   cx="22.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle23" />
+              </g>
+              <g
+                 id="g26">
+                <circle
+                   cx="32.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle24" />
+                <circle
+                   cx="27.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle25" />
+                <circle
+                   cx="22.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle26" />
+              </g>
+            </g>
+          </svg>
+        </g>
+      </g>
+    </g>
+    <rect
+       style="fill:#f4d7d7;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect98"
+       width="113.44117"
+       height="592.95135"
+       x="76.152367"
+       y="-96.167488" />
+    <g
+       class="architecture-service"
+       transform="translate(89.29916,-83.663102)"
+       id="g39">
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="middle"
+         text-anchor="middle"
+         transform="translate(40,80)"
+         id="g33">
+        <g
+           id="g32">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect30"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text32"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan32"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan30">AMED</tspan><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan31">Gateway</tspan></tspan></text>
+        </g>
+      </g>
+      <g
+         id="g38">
+        <g
+           id="g37">
+          <svg
+             width="80"
+             height="80"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg36">
+            <g
+               id="g36">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect33"
+                 x="0"
+                 y="0" />
+              <circle
+                 cx="40"
+                 cy="40"
+                 r="22.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="circle33" />
+              <line
+                 x1="40"
+                 y1="17.5"
+                 x2="40"
+                 y2="62.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line33" />
+              <line
+                 x1="17.5"
+                 y1="40"
+                 x2="62.5"
+                 y2="40"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line34" />
+              <path
+                 d="m 39.99,17.51 c -15.28,11.1 -15.28,33.88 0,44.98"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="path34" />
+              <path
+                 d="m 40.01,17.51 c 15.28,11.1 15.28,33.88 0,44.98"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="path35" />
+              <line
+                 x1="19.75"
+                 y1="30.1"
+                 x2="60.25"
+                 y2="30.1"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line35" />
+              <line
+                 x1="19.75"
+                 y1="49.900002"
+                 x2="60.25"
+                 y2="49.900002"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line36" />
+            </g>
+          </svg>
+        </g>
+      </g>
+    </g>
+    <g
+       class="architecture-service"
+       transform="translate(290.18048,348.37876)"
+       id="g61">
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="middle"
+         text-anchor="middle"
+         transform="translate(40,80)"
+         id="g42">
+        <g
+           id="g41">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect39"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text41"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan41"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan39">amed</tspan><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan40">care</tspan></tspan></text>
+        </g>
+      </g>
+      <g
+         id="g60">
+        <g
+           id="g59">
+          <svg
+             width="80"
+             height="80"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg58">
+            <g
+               id="g58">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect42"
+                 x="0"
+                 y="0" />
+              <rect
+                 x="17.5"
+                 y="17.5"
+                 width="45"
+                 height="45"
+                 rx="2"
+                 ry="2"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="rect43" />
+              <line
+                 x1="17.5"
+                 y1="32.5"
+                 x2="62.5"
+                 y2="32.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line43" />
+              <line
+                 x1="17.5"
+                 y1="47.5"
+                 x2="62.5"
+                 y2="47.5"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line44" />
+              <g
+                 id="g45">
+                <path
+                   d="m 56.25,25 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path44" />
+                <path
+                   d="m 56.25,25 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path45" />
+              </g>
+              <g
+                 id="g47">
+                <path
+                   d="m 56.25,40 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path46" />
+                <path
+                   d="m 56.25,40 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path47" />
+              </g>
+              <g
+                 id="g49">
+                <path
+                   d="m 56.25,55 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:#ffffff;stroke-width:0px"
+                   id="path48" />
+                <path
+                   d="m 56.25,55 c 0,0.27 -0.45,0.5 -1,0.5 h -10.5 c -0.55,0 -1,-0.23 -1,-0.5 0,-0.27 0.45,-0.5 1,-0.5 h 10.5 c 0.55,0 1,0.23 1,0.5 z"
+                   style="fill:none;stroke:#ffffff;stroke-miterlimit:10"
+                   id="path49" />
+              </g>
+              <g
+                 id="g51">
+                <circle
+                   cx="32.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle49" />
+                <circle
+                   cx="27.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle50" />
+                <circle
+                   cx="22.5"
+                   cy="25"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle51" />
+              </g>
+              <g
+                 id="g54">
+                <circle
+                   cx="32.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle52" />
+                <circle
+                   cx="27.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle53" />
+                <circle
+                   cx="22.5"
+                   cy="40"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle54" />
+              </g>
+              <g
+                 id="g57">
+                <circle
+                   cx="32.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle55" />
+                <circle
+                   cx="27.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle56" />
+                <circle
+                   cx="22.5"
+                   cy="55"
+                   r="0.75"
+                   style="fill:#ffffff;stroke:#ffffff;stroke-miterlimit:10"
+                   id="circle57" />
+              </g>
+            </g>
+          </svg>
+        </g>
+      </g>
+    </g>
+    <rect
+       style="fill:#de8787;stroke:none;stroke-width:1.88976;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect108"
+       width="113.44116"
+       height="374.91904"
+       x="270.85281"
+       y="-96.167488" />
+    <g
+       class="architecture-service"
+       transform="translate(289.63143,-92.210054)"
+       id="g71">
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="middle"
+         text-anchor="middle"
+         transform="translate(40,80)"
+         id="g67">
+        <g
+           id="g66">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect61"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text66"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan63"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan61">Temp</tspan><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan62">Health</tspan></tspan><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="1em"
+               dy="1.1em"
+               id="tspan66"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan64">Wallet</tspan><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan65">database</tspan></tspan></text>
+        </g>
+      </g>
+      <g
+         id="g70">
+        <g
+           id="g69">
+          <svg
+             width="80"
+             height="80"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg68">
+            <g
+               id="g68">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect67"
+                 x="0"
+                 y="0" />
+              <path
+                 id="IconifyId1922c417a013efc220"
+                 data-name="4"
+                 d="M 20,57.86 C 20,61.8 28.95,65 40,65 51.05,65 60,61.8 60,57.86"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
+              <path
+                 id="IconifyId1922c417a013efc221"
+                 data-name="3"
+                 d="m 20,45.95 c 0,3.94 8.95,7.14 20,7.14 11.05,0 20,-3.2 20,-7.14"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
+              <path
+                 id="IconifyId1922c417a013efc222"
+                 data-name="2"
+                 d="m 20,34.05 c 0,3.94 8.95,7.14 20,7.14 11.05,0 20,-3.2 20,-7.14"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
+              <ellipse
+                 id="IconifyId1922c417a013efc223"
+                 data-name="1"
+                 cx="40"
+                 cy="22.139999"
+                 rx="20"
+                 ry="7.1399999"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10" />
+              <line
+                 x1="20"
+                 y1="57.860001"
+                 x2="20"
+                 y2="22.139999"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line67" />
+              <line
+                 x1="60"
+                 y1="57.860001"
+                 x2="60"
+                 y2="22.139999"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="line68" />
+            </g>
+          </svg>
+        </g>
+      </g>
+    </g>
+    <rect
+       x="-349.68048"
+       y="-126.1631"
+       width="182"
+       height="641.39648"
+       class="node-bkg"
+       id="rect80"
+       style="fill:none;stroke:#757575;stroke-dasharray:6, 2;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       id="g86">
+      <g
+         transform="translate(-348.68048,-125.1631)"
+         id="g83">
+        <g
+           id="g82">
+          <svg
+             width="30"
+             height="30"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg81">
+            <g
+               id="g81">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect81"
+                 x="0"
+                 y="0" />
+              <path
+                 d="m 65,47.5 c 0,2.76 -2.24,5 -5,5 H 20 c -2.76,0 -5,-2.24 -5,-5 0,-1.87 1.03,-3.51 2.56,-4.36 -0.04,-0.21 -0.06,-0.42 -0.06,-0.64 0,-2.6 2.48,-4.74 5.65,-4.97 1.65,-4.51 6.34,-7.76 11.85,-7.76 0.86,0 1.69,0.08 2.5,0.23 2.09,-1.57 4.69,-2.5 7.5,-2.5 6.1,0 11.19,4.38 12.28,10.17 2.14,0.56 3.72,2.51 3.72,4.83 0,0.03 0,0.07 -0.01,0.1 2.29,0.46 4.01,2.48 4.01,4.9 z"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="path81" />
+            </g>
+          </svg>
+        </g>
+      </g>
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="start"
+         text-anchor="start"
+         transform="translate(-315.68048,-119.1631)"
+         id="g85">
+        <g
+           id="g84">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect83"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text84"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan84"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan83">KTB</tspan></tspan></text>
+        </g>
+      </g>
+    </g>
+    <rect
+       x="-18.700836"
+       y="-126.1631"
+       width="431.38132"
+       height="662.50409"
+       class="node-bkg"
+       id="rect86"
+       style="fill:none;stroke:#757575;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1" />
+    <g
+       id="g92">
+      <g
+         transform="translate(-17.700837,-125.1631)"
+         id="g89">
+        <g
+           id="g88">
+          <svg
+             width="30"
+             height="30"
+             viewBox="0 0 80 80"
+             version="1.1"
+             id="svg87">
+            <g
+               id="g87">
+              <rect
+                 width="80"
+                 height="80"
+                 style="fill:#087ebf;stroke-width:0px"
+                 id="rect87"
+                 x="0"
+                 y="0" />
+              <path
+                 d="m 65,47.5 c 0,2.76 -2.24,5 -5,5 H 20 c -2.76,0 -5,-2.24 -5,-5 0,-1.87 1.03,-3.51 2.56,-4.36 -0.04,-0.21 -0.06,-0.42 -0.06,-0.64 0,-2.6 2.48,-4.74 5.65,-4.97 1.65,-4.51 6.34,-7.76 11.85,-7.76 0.86,0 1.69,0.08 2.5,0.23 2.09,-1.57 4.69,-2.5 7.5,-2.5 6.1,0 11.19,4.38 12.28,10.17 2.14,0.56 3.72,2.51 3.72,4.83 0,0.03 0,0.07 -0.01,0.1 2.29,0.46 4.01,2.48 4.01,4.9 z"
+                 style="fill:none;stroke:#ffffff;stroke-width:2px;stroke-miterlimit:10"
+                 id="path87" />
+            </g>
+          </svg>
+        </g>
+      </g>
+      <g
+         dy="1em"
+         alignment-baseline="middle"
+         dominant-baseline="start"
+         text-anchor="start"
+         transform="translate(15.299163,-119.1631)"
+         id="g91">
+        <g
+           id="g90">
+          <rect
+             class="background"
+             style="stroke:none"
+             id="rect89"
+             width="0"
+             height="0"
+             x="0"
+             y="0" />
+          <text
+             y="-10.1"
+             id="text90"><tspan
+               class="text-outer-tspan"
+               x="0"
+               y="-0.1em"
+               dy="1.1em"
+               id="tspan90"><tspan
+                 font-style="normal"
+                 class="text-inner-tspan"
+                 font-weight="normal"
+                 id="tspan89">AMED</tspan></tspan></text>
+        </g>
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#008000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m -188.54367,71.178336 h 451.351"
+       id="path93"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15.3296px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.383241"
+       x="-158.15581"
+       y="24.960632"
+       id="text93"><tspan
+         sodipodi:role="line"
+         id="tspan93"
+         x="-158.15581"
+         y="24.960632"
+         style="stroke-width:0.383241">1. Get Hospital List</tspan><tspan
+         sodipodi:role="line"
+         x="-158.15581"
+         y="44.160271"
+         style="stroke-width:0.383241"
+         id="tspan109">เรียกดูรายชื่อร้านยา</tspan><tspan
+         sodipodi:role="line"
+         x="-158.15581"
+         y="63.359909"
+         id="tspan94"
+         style="stroke-width:0.383241">ที่เข้าร่วมโครงการ</tspan></text>
+    <path
+       style="fill:none;stroke:#008000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 263.88618,89.178336 H -189.87846"
+       id="path94"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15.3296px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.383241"
+       x="-157.17831"
+       y="170.0435"
+       id="text96"><tspan
+         sodipodi:role="line"
+         x="-157.17831"
+         y="170.0435"
+         id="tspan96"
+         style="stroke-width:0.383241">2. Create Appointment</tspan><tspan
+         sodipodi:role="line"
+         x="-157.17831"
+         y="189.24313"
+         style="stroke-width:0.383241"
+         id="tspan110">ส่งการนัดหมาย</tspan><tspan
+         sodipodi:role="line"
+         x="-157.17831"
+         y="208.44278"
+         style="stroke-width:0.383241"
+         id="tspan97">พร้อมข้อมูลผู้ป่วย</tspan><tspan
+         sodipodi:role="line"
+         x="-157.17831"
+         y="227.64241"
+         style="stroke-width:0.383241"
+         id="tspan98">อาการประเมิน</tspan></text>
+    <path
+       style="fill:none;stroke:#008000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M -194.1755,233.46513 H 263.61188"
+       id="path98"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#008000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="M 138.90705,393.17912 H -186.13003"
+       id="path99"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15.3296px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.383241"
+       x="-162.31612"
+       y="370.60754"
+       id="text101"><tspan
+         sodipodi:role="line"
+         x="-162.31612"
+         y="370.60754"
+         style="stroke-width:0.383241"
+         id="tspan101">3. Update Appointment Status</tspan><tspan
+         sodipodi:role="line"
+         x="-162.31612"
+         y="389.80719"
+         style="stroke-width:0.383241"
+         id="tspan111">ส่งกลับสถานนะการเข้ารับบริการ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15.3296px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.383241"
+       x="186.21312"
+       y="384.06592"
+       id="text108"><tspan
+         sodipodi:role="line"
+         x="186.21312"
+         y="384.06592"
+         style="stroke-width:0.383241"
+         id="tspan108">3. เรียกดูผู้ป่วย</tspan></text>
+    <path
+       style="fill:none;stroke:#008000;stroke-width:1.88976;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Triangle)"
+       d="m 260.39369,249.16517 -123.08457,0.14599 1.59793,143.86796 h 132.7503"
+       id="path108"
+       sodipodi:nodetypes="cccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Line"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       class="architecture-edges"
+       id="g8"
+       style="stroke:#000000">
+      <g
+         id="g2"
+         style="stroke:#000000">
+        <path
+           d="M 129.29916,117.6631 V 57 -3.6631023"
+           class="edge"
+           id="path1"
+           style="stroke:#000000" />
+        <polygon
+           points="0,0 13.333333,0 6.6666667,13.333333 "
+           transform="translate(122.6325,106.32977)"
+           class="arrow"
+           id="polygon1"
+           style="stroke:#000000" />
+        <polygon
+           points="6.6666667,0 13.333333,13.333333 0,13.333333 "
+           transform="translate(122.6325,-5.6631023)"
+           class="arrow"
+           id="polygon2"
+           style="stroke:#000000" />
+      </g>
+      <g
+         id="g3"
+         style="stroke:#000000">
+        <path
+           d="M 290.18048,-43.663102 H 229.73982 169.29916"
+           class="edge"
+           id="path2"
+           style="stroke:#000000" />
+        <polygon
+           points="13.333333,6.6666667 0,13.333333 0,0 "
+           transform="translate(278.84714,-50.329769)"
+           class="arrow"
+           id="polygon3"
+           style="stroke:#000000" />
+      </g>
+      <g
+         id="g5"
+         style="stroke:#000000">
+        <path
+           d="m -218.68048,-43.663102 h 51.25527 51.25527"
+           class="edge"
+           id="path3"
+           style="stroke:#000000" />
+        <polygon
+           points="0,6.6666667 13.333333,0 13.333333,13.333333 "
+           transform="translate(-220.68048,-50.329769)"
+           class="arrow"
+           id="polygon4"
+           style="stroke:#000000" />
+        <polygon
+           points="13.333333,6.6666667 0,13.333333 0,0 "
+           transform="translate(-127.50327,-50.329769)"
+           class="arrow"
+           id="polygon5"
+           style="stroke:#000000" />
+      </g>
+      <g
+         id="g7"
+         style="stroke:#000000">
+        <path
+           d="M -36.16994,-43.663102 H 26.564612 89.299163"
+           class="edge"
+           id="path5"
+           style="stroke:#000000" />
+        <polygon
+           points="0,6.6666667 13.333333,0 13.333333,13.333333 "
+           transform="translate(-38.16994,-50.329769)"
+           class="arrow"
+           id="polygon6"
+           style="stroke:#000000" />
+        <polygon
+           points="13.333333,6.6666667 0,13.333333 0,0 "
+           transform="translate(77.96583,-50.329769)"
+           class="arrow"
+           id="polygon7"
+           style="stroke:#000000" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata111">
+    <rdf:RDF>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/4.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/4.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>thanachai.tho@nstda.or.th</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>thanachai.tho@nstda.or.th</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Diagram</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
