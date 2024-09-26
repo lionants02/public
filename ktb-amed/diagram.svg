@@ -51,9 +51,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="0.87888783"
-     inkscape:cx="405.62628"
-     inkscape:cy="386.28365"
+     inkscape:zoom="2.4858702"
+     inkscape:cx="607.6343"
+     inkscape:cy="143.00827"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -120,15 +120,7 @@
                x="0"
                y="-0.1em"
                dy="1.1em"
-               id="tspan10"><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan8">Health</tspan><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan9">Wallet</tspan></tspan></text>
+               id="tspan10">Health Wallet</tspan></text>
         </g>
       </g>
       <g
@@ -309,15 +301,7 @@
                x="0"
                y="-0.1em"
                dy="1.1em"
-               id="tspan32"><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan30">AMED</tspan><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan31">Gateway</tspan></tspan></text>
+               id="tspan32">AMED Gateway</tspan></text>
         </g>
       </g>
       <g
@@ -414,15 +398,7 @@
                x="0"
                y="-0.1em"
                dy="1.1em"
-               id="tspan41"><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan39">amed</tspan><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan40">care</tspan></tspan></text>
+               id="tspan41">amed care</tspan></text>
         </g>
       </g>
       <g
@@ -603,28 +579,12 @@
                x="0"
                y="-0.1em"
                dy="1.1em"
-               id="tspan63"><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan61">Temp</tspan><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan62">Health</tspan></tspan><tspan
+               id="tspan63">Temp Health</tspan><tspan
                class="text-outer-tspan"
                x="0"
                y="1em"
                dy="1.1em"
-               id="tspan66"><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan64">Wallet</tspan><tspan
-                 font-style="normal"
-                 class="text-inner-tspan"
-                 font-weight="normal"
-                 id="tspan65">database</tspan></tspan></text>
+               id="tspan66">Wallet database</tspan></text>
         </g>
       </g>
       <g
