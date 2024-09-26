@@ -22,7 +22,7 @@ architecture-beta
         service amed_gw(internet)[AMED Gateway] in amed
         service amed_system(server)[amed care] in amed
         service temp_db(database)[Temp Health Wallet database] in amed
-            temp_db:T <--> B:amed_gw
+            temp_db:L <--> B:amed_gw
             amed_system:L <-- R:amed_gw
 
     service gb(internet)[internet]
