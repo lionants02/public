@@ -103,6 +103,7 @@ flowchart LR
 </details>
 
 # Timeline
+สำหรับจำนวนผู้พัฒนาระบบทั้งหมด 1 คน
 ```mermaid
 gantt
     title Timeline
@@ -110,14 +111,15 @@ gantt
     excludes weekends
     weekend friday
     Initial : milestone,m1 ,2024-09-29,0d
-    section ออกแบบ
-        openapi          :a1, 2024-10-07, 4d
+    section Document
+        Flowchart   :f1, 2024-09-29, 6d
+        openapi doc          :a1, 2024-10-07, 4d
     section พัฒนา
         infrastructure: 2024-09-29, 31d
         coding :2024-10-11, 16d
-        CI/CD deploy    :2d
-        Basic api gateway    :7d
-        test fix bug    :28d
+        DevOps CI/CD Test, UAT, PROD    :2024-10-11, 19d
+        Basic api gateway    :2024-10-17, 21d
+        fix bug    :28d
     section อื่นๆ
         logging :2024-11-15, 30d
         monitor :2024-11-15, 30d
