@@ -44,9 +44,12 @@ architecture-beta
 flowchart LR
     hw["Health Wallet"]
     gw["AMED Gateway"]
+    sheet["Google Sheet"]
 
     hw -->|"1"| gw
     gw -->|"2"| hw
+
+    sheet -->|"อัพเดทข้อมูล <br>วันทำการ"| gw
 ```
 <details>
 <summary>คลิกเพื่อเปิดดูคำอธิบายโฟล</summary>
