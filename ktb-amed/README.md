@@ -113,7 +113,7 @@ gantt
     Initial : milestone,m1 ,2024-09-29,0d
     section Document
         Flowchart   :f1, 2024-09-29, 6d
-        openapi doc          :a1, 2024-10-07, 4d
+        openapi          :a1, 2024-10-07, 4d
     section พัฒนา
         infrastructure: 2024-09-29, 31d
         coding :2024-10-11, 16d
