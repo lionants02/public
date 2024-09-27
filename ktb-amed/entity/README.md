@@ -19,7 +19,7 @@ erDiagram
         double latitude
         double longitude
         text address
-        text telNo
+        text tel_no "โทรศัพท์"
     }
 
     business_project_code{
