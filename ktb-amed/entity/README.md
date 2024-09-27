@@ -1,19 +1,13 @@
 # Basic ER Diagram
 ```mermaid
 erDiagram
-    hospital["ข้อมูลโรงพยาบาล"]
-    business_hours["เวลาทำการ"]
-    business_project_code["โครงการที่เข้าร่วม"]
-    appointment["การนัดหมาย"]
-
     hospital one to one business_hours: "one to one"
     hospital one to many business_project_code :"one to many"
     hospital one to many appointment :"one to many"
     appointment one to many appointment_possible_diagnosist:"one to many"
+    appointment one to one appointment_response_status:"one to one"
 
-
-
-    hospital{
+    hospital["ข้อมูลโรงพยาบาล"]{
         varchar(20) hospital_code PK
         text hospital_name
         double latitude
@@ -22,12 +16,12 @@ erDiagram
         text tel_no "โทรศัพท์"
     }
 
-    business_project_code{
+    business_project_code["โครงการที่เข้าร่วม"]{
         varchar(20) hospital_code PK,FK
         varchar(10) project_code
     }
 
-    business_hours{
+    business_hours["เวลาทำการ"]{
         varchar(20) hospital_code PK,FK
         text hour_mon_from "เวลาเปิดทำการ วันจันทร์ 8:00"
         text hour_mon_to "เวลาปิดทำการ วันจันทร์ 12:00"
@@ -45,7 +39,8 @@ erDiagram
         text hour_sun_to
         boolean holiday "หยุดนักขัตฤกษ์ T:หยุด F:ไม่หยุด"
     }
-    appointment{
+
+    appointment["การนัดหมาย"]{
         varchar(20) hospital_code PK,FK
         varchar(50) appointment_ref_id "รหัสอ้างอิง"
         timestamp booking_date_time
@@ -60,12 +55,6 @@ erDiagram
         array[text] suggestion "คำแนะนำ (Suggestion)"
         array[text] transportation "คำแนะนำการเดินทาง (Transportation)"
         text urgency "ความเร่งด่วนในการเข้ารักษาพยาบาล (Urgency)"
-
-        text appointment_status
-        varchar(10) appointment_http_status "ค่าได้หลังจากส่งข้อมูล 200"
-        varchar(10) appointment_status_code "ค่าได้หลังจากส่งข้อมูล"
-        text appointment_status_desc "ค่าได้หลังจากส่งข้อมูล Status description"
-
     }
 
     appointment_possible_diagnosist["วินิจฉัยเบื้องต้น"]{
@@ -79,7 +68,14 @@ erDiagram
         array[text] assessment_practitioner
         array[text] medication
     }
-    
+
+    appointment_response_status["สถานนะการจอง"]{
+        varchar(50) appointment_ref_id FK "รหัสอ้างอิง"
+        text status "CANCEL:ยกเลิก CONFIRM:ยืนยันการเข้ารับบริการ"
+        varchar(10) http_status "ค่าได้หลังจากส่งข้อมูล 200"
+        varchar(10) status_code "ค่าได้หลังจากส่งข้อมูล"
+        text status_desc "ค่าได้หลังจากส่งข้อมูล Status description"
+    }
 ```
 ---
 project_code โครงการที่เข้าร่วม
