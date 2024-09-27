@@ -18,7 +18,7 @@ erDiagram
 
     business_project_code["โครงการที่เข้าร่วม"]{
         varchar(20) hospital_code PK,FK
-        varchar(10) project_code
+        varchar(10) project_code PK
     }
 
     business_hours["เวลาทำการ"]{
@@ -42,7 +42,7 @@ erDiagram
 
     appointment["การนัดหมาย"]{
         varchar(20) hospital_code PK,FK
-        varchar(50) appointment_ref_id "รหัสอ้างอิง"
+        varchar(50) appointment_ref_id PK "รหัสอ้างอิง"
         timestamp booking_date_time
         varchar(10) project_code "โครงการที่ผู้ป่วยต้องการเข้ารับบริการ"
         text project_name "ชื่อโครงการที่ผู้ป่วยต้องการเข้ารับบริการ"
@@ -70,7 +70,7 @@ erDiagram
     }
 
     appointment_response_status["สถานนะการจอง"]{
-        varchar(50) appointment_ref_id FK "รหัสอ้างอิง"
+        varchar(50) appointment_ref_id PK,FK "รหัสอ้างอิง"
         text status "CANCEL:ยกเลิก CONFIRM:ยืนยันการเข้ารับบริการ"
         varchar(10) http_status "ค่าได้หลังจากส่งข้อมูล 200"
         varchar(10) status_code "ค่าได้หลังจากส่งข้อมูล"
