@@ -6,6 +6,7 @@ erDiagram
     hospital one to many appointment :"one to many"
     appointment one to many appointment_possible_diagnosist:"one to many"
     appointment one to one appointment_response_status:"one to one"
+    appointment one to many appointment_toke:"one to many"
 
     hospital["ข้อมูลโรงพยาบาล"]{
         varchar(20) hospital_code PK
@@ -49,6 +50,7 @@ erDiagram
         varchar(20) citizen_id
         varchar(5) weight
         varchar(5) height
+        varchar(10) platform "จองจาก platform อะไร"
         varchar(5) flag_code "สีของอาการ (Color Flag)
 "
         array[text] general_advice "คำแนะนำเบื้องต้นสำหรับคนไข้ (Lifestyle Medicine - General Advice)"
@@ -76,6 +78,13 @@ erDiagram
         varchar(10) status_code "ค่าได้หลังจากส่งข้อมูล"
         text status_desc "ค่าได้หลังจากส่งข้อมูล Status description"
     }
+
+    appointment_toke["โทเคนการจอง"]{
+        timestamp time "วันเวลาที่สร้าง token"
+        varchar(30) token PK "โทเคน"
+        varchar(50) appointment_ref_id FK
+        varchar(20) citizen_id "มีไว้เพื่อ debug"
+    }
 ```
 ---
 project_code โครงการที่เข้าร่วม
@@ -97,6 +106,18 @@ appointment_status_code (statusCode)
 - 5000 = No data found
 - 9999 = General Error 
 
+---
+ใช้สำหรับบันทึกข้อมูลที่จะส่งกลับไปยังระบบที่ทำการจองมา โดยจะมีอีก กระบวนการ รับช่วงต่อตรงนี้
+```mermaid
+erDiagram
+    queue_appointment_confirm_status["คิวงานสำหรับส่งสถานนะการจองกลับไปยังต้นทาง"]{
+        timestamp time "วันเวลาที่สร้าง"
+        varchar(50) appointment_ref_id
+        varchar(20) citizen_id
+        varchar(20) status
+        varchar(10) platform "จาก platform อะไร"
+    }
+```
 ---
 ชุดข้อมูลสำหรับบันทึกกิจกรรม
 ```mermaid
