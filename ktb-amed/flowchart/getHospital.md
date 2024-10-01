@@ -3,23 +3,23 @@
 
 ```mermaid
 flowchart TD
-    s("getHospitalList(project_code)")
-    v{"ตรวจสอบ (project_code)<br>ตอนนี้รับเฉพาะ P02"}
-    p[["สร้างรายการตาม(project_code)"]]
-    check_empty{"มีรายการหรือไม่"}
+    s("getHospitalList(projectCode)")
+    v{"(projectCode) ไม่ใช่ ALL"}
+    p[["สร้างรายการตาม(projectCode)"]]
+    check_empty{"รายการไม่ว่างปล่าว </br>ใช่หรือไม่"}
     success["statusDesc=SUCCESS"]
     r("Return HTTP 200 <br>ส่งคืนข้อมูล")
 
-    s-->v-->|P02|p-->check_empty-->|"มี"|success-->r
+    s-->v-->|ใช่|p-->check_empty-->|"ใช่ พบข้อมูล </br>มีรายการ"|success-->r
 
-    all["กำหนด project_code = P02"]
-    v-->|ALL|all
-    all-->p
+    all[["สร้างรายการทั้งหมด"]]
+    
+    %% projectCode เป็น ALL
+    v-->|เป็น ALL|all
+    all-->check_empty
 
+    %% เมื่อไม่มีข้อมูลรายการ
     else("Return HTTP 404<br>statusCode:9999<br>statusDesc:projectCode not founnd")
-    v------>|else|else
-
-    empty["statusDesc=EMPTY"]
-    check_empty-->|"ไม่มี"|empty-->r
+    check_empty-->|"ว่างเปล่า"|else
 
 ```

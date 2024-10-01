@@ -1,4 +1,5 @@
 # Basic ER Diagram
+## โครงสร้างตารางหลัก
 ```mermaid
 erDiagram
     hospital one to one business_hours: "one to one"
@@ -109,7 +110,31 @@ appointment_status_code (statusCode)
 - 5000 = No data found
 - 9999 = General Error 
 
+# ตารางเสริมอื่นๆ 
+## ตารางกำหนดค่าเริ่มต้นเวลาทำการสำหรับหน่วยงาน
+สำหรับกำหนดค่าเริ่มต้นเวลาทำการ สำหรับหน่วยงานที่ยังไม่ได้กำหนดค่า
+```mermaid
+erDiagram
+    default_business_hours["ค่าเริ่มต้นเวลาทำการ"]{
+        text hour_mon_from "เวลาเปิดทำการ วันจันทร์ 8:00"
+        text hour_mon_to "เวลาปิดทำการ วันจันทร์ 12:00"
+        text hour_tue_from
+        text hour_tue_to
+        text hour_wed_from
+        text hour_wed_to
+        text hour_thu_from
+        text hour_thu_to
+        text hour_fri_from
+        text hour_fri_to
+        text hour_sat_from
+        text hour_sat_to
+        text hour_sun_from
+        text hour_sun_to
+        boolean holiday "หยุดนักขัตฤกษ์ T:หยุด F:ไม่หยุด"
+    }
+```
 ---
+## ตารางคิวงาน สำหรับส่งผลกลับไปยังระบบจอง
 ใช้สำหรับบันทึกข้อมูลที่จะส่งกลับไปยังระบบที่ทำการจองมา โดยจะมีอีก กระบวนการ รับช่วงต่อตรงนี้
 ```mermaid
 erDiagram
@@ -122,6 +147,7 @@ erDiagram
     }
 ```
 ---
+## ตารางสำหรับบันทึก activity ต่างๆ
 ชุดข้อมูลสำหรับบันทึกกิจกรรม
 ```mermaid
 erDiagram
@@ -135,3 +161,4 @@ erDiagram
 
     }
 ```
+---

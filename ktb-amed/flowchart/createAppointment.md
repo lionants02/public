@@ -7,7 +7,7 @@
 ```mermaid
 flowchart TD
     s("createAppointment(คน, refId, วันเวลา)")
-    checkTime{"คนนี้ <br>ได้จองในวันเดียวกันไปแล้ว <br>ให้เช็คจาก โทเคนการจอง"}
+    checkTime{"คนนี้ <br>มีการจองในวันเดียวกันไปแล้วหรือไม่ <br>ให้เช็คจาก โทเคนการจอง"}
     record[["บันทึกการจอง"]]
     r("Retur HTTP 200<br>statusCode:0000<br>statusDesc:SUCCESS")
 
