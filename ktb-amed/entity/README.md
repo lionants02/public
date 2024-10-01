@@ -42,6 +42,7 @@ erDiagram
     }
 
     appointment["การนัดหมาย"]{
+        timestamp time "วันเวลาที่สร้างข้อมูล"
         varchar(20) hospital_code PK,FK
         varchar(50) appointment_ref_id PK "รหัสอ้างอิง"
         timestamp booking_date_time
@@ -60,6 +61,7 @@ erDiagram
     }
 
     appointment_possible_diagnosist["วินิจฉัยเบื้องต้น"]{
+        timestamp time "วันเวลาที่สร้างข้อมูล"
         varchar(50) appointment_ref_id FK
         varchar(15) symptom_code
         text symptom_result
@@ -72,6 +74,7 @@ erDiagram
     }
 
     appointment_response_status["สถานนะการจอง"]{
+        timestamp time "วันเวลาที่สร้างข้อมูล"
         varchar(50) appointment_ref_id PK,FK "รหัสอ้างอิง"
         text status "CANCEL:ยกเลิก CONFIRM:ยืนยันการเข้ารับบริการ"
         varchar(10) http_status "ค่าได้หลังจากส่งข้อมูล 200"
