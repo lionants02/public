@@ -147,18 +147,3 @@ erDiagram
     }
 ```
 ---
-## ตารางสำหรับบันทึก activity ต่างๆ
-ชุดข้อมูลสำหรับบันทึกกิจกรรม
-```mermaid
-erDiagram
-    activity_log["บันทึกกิจกรรม"]{
-        timestamp time
-        text action
-        varchar(50) ref_id
-        text description
-        int http_response_code
-        varchar(10) tag
-
-    }
-```
----
