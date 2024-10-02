@@ -10,11 +10,17 @@ flowchart TD
     checkTime{"คนนี้ <br>มีการจองในวันเดียวกันไปแล้วหรือไม่ <br>ให้เช็คจาก โทเคนการจอง"}
     record[["บันทึกการจอง"]]
     r("Retur HTTP 200<br>statusCode:0000<br>statusDesc:SUCCESS")
+    p1(( ))
+    p2(( ))
+    monitor[["monitor"]]
+    p1-->monitor
 
-    s-->checkTime-->|"ไม่มีการจองในวันเดียวกัน"|record-->r
+    s-->checkTime-->|"ไม่มีการจองในวันเดียวกัน"|p1--->record-->r
 
     doubleBooking("Retur HTTP 400<br>statusCode:2000<br>statusDesc:Status doesn't match")
-    checkTime--->|"มีการจองไปแล้วในวันเดียวกัน"|doubleBooking
+    
+    p2-->monitor
+    checkTime--->|"มีการจองไปแล้วในวันเดียวกัน"|p2-->doubleBooking
 ```
 ---
 โฟล บันทึกการจอง
