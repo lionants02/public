@@ -60,6 +60,7 @@
 - HN admits.patientDetail.hn **ไม่ส่งออก**
 - AN admits.patientDetail.an **ไม่ส่งออก**
 - **CUSTOM_AGE อายุ**
+- **CUSTOM_MEDICINE_ALLERGY ข้อมูลการแพ้ยา**
 
 ### แฟ้มที่ 2 NHSO Provider
 - SEQ admits._id
